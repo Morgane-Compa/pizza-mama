@@ -10,6 +10,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CommandComponent } from './pages/command/command.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { BuonAppetitoComponent } from './components/buon-appetito/buon-appetito.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     CartComponent,
     CommandComponent,
     HeaderComponent,
-    NavBarComponent
+    NavBarComponent,
+    BuonAppetitoComponent
   ],
   imports: [
     BrowserModule,
