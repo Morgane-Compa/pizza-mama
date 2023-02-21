@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "../node_modules/normalize.css/normalize.css";
+
+:root {
+  --bg-body-color: #F5F5F5;
+}
+
+body {
+  background-color: var(--bg-body-color);
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* font-family: 'Inter', sans-serif;
    font-family: 'Playfair Display', serif;
     */
+

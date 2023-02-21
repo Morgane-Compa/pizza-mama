@@ -1,0 +1,3 @@
+<ul class="product-tags d-flex">
+  <li *ngFor="let tag of allTags" (click)="filterProductsWithTag(tag)" >{{ tag | titlecase}}</li>
+</ul>
