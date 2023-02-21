@@ -11,6 +11,10 @@ import { CommandComponent } from './pages/command/command.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BuonAppetitoComponent } from './components/buon-appetito/buon-appetito.component';
+import { CustomizeParentComponent } from './components/custom-product/customize-parent/customize-parent.component';
+import { ProductExtraComponent } from './components/custom-product/product-extra/product-extra.component';
+import { BaseProductComponent } from './components/custom-product/base-product/base-product.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { BuonAppetitoComponent } from './components/buon-appetito/buon-appetito.
     CommandComponent,
     HeaderComponent,
     NavBarComponent,
-    BuonAppetitoComponent
+    BuonAppetitoComponent,
+    CustomizeParentComponent,
+    ProductExtraComponent,
+    BaseProductComponent,
+   
   ],
   imports: [
     BrowserModule,
