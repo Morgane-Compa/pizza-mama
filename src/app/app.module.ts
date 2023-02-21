@@ -13,6 +13,11 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductsCategoryComponent } from './components/products/products-category/products-category.component';
 import { TagsComponent } from './components/products/tags/tags.component';
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
+import { BuonAppetitoComponent } from './components/buon-appetito/buon-appetito.component';
+import { CustomizeParentComponent } from './components/custom-product/customize-parent/customize-parent.component';
+import { ProductExtraComponent } from './components/custom-product/product-extra/product-extra.component';
+import { BaseProductComponent } from './components/custom-product/base-product/base-product.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { ProductCardComponent } from './components/products/product-card/product
     ProductsCategoryComponent,
     TagsComponent,
     ProductCardComponent
+    BuonAppetitoComponent,
+    CustomizeParentComponent,
+    ProductExtraComponent,
+    BaseProductComponent,
+   
   ],
   imports: [
     BrowserModule,
