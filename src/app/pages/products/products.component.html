@@ -1,1 +1,9 @@
-<p>products works!</p>
+<main>
+  <app-tags [allTags]="allTags" (newTagEvent)="filterProductsWithTag($event)"></app-tags>
+
+  <app-products-category [category]="allCategories[0]" [products]="allFilteredProducts"></app-products-category>
+  <!-- <app-products-category [category]="allCategories[0]" [products]="pizzaProduct"></app-products-category>
+  <app-products-category [category]="allCategories[2]" [products]="dessertProduct"></app-products-category>
+  <app-products-category [category]="allCategories[1]" [products]="boissonProduct"></app-products-category> -->
+
+</main>

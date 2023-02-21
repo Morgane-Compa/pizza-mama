@@ -1,0 +1,22 @@
+.cards-cont {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+
+
+
+}
+.product-card {
+  padding: 15px 13px 0 13px;
+  background-color: #ffffff;
+  width: 207px;
+  height: 268px;
+}
+
+.product-categories {
+ margin-top: 54px;
+}
+
+h2 {
+  margin-bottom: 28px;
+}

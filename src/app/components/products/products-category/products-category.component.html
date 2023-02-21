@@ -1,0 +1,6 @@
+<div class="product-categories">
+  <h2>Les {{category}}s della mamma</h2>
+  <div class="cards-cont d-flex">
+    <app-product-card *ngFor="let product of products" [product]="product"class="product-card d-flex"></app-product-card>
+  </div>
+</div>
