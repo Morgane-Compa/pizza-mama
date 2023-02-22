@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #092947;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+
+

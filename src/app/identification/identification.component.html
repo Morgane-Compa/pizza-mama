@@ -1,0 +1,14 @@
+<div id="welcome">
+<form [formGroup]="identificationForm" (ngSubmit)="onSubmit()">
+    <h1>Benvenuto!</h1>
+  <label for="identification">Veuillez renseigner votre numéro de table:</label>
+  <input type="text" id="identification" placeholder="Example 42" formControlName="identification">
+  <div *ngIf="identificationForm.invalid && (identificationForm.dirty || identificationForm.touched)" class="error-message">
+    <div id="error" *ngIf="error">
+        Numéro de table incorrecte.
+    </div>
+  </div>
+  <button type="submit" id="login">C’est parti !</button>
+</form>
+</div>
+
