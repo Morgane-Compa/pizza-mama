@@ -1,1 +1,18 @@
-<p>product-extra works!</p>
+<h3>Extras</h3>
+
+<!-- utiliser un *ngFor pour que tout les ingrédients soit bouclé  -->
+<div class="extras">
+
+    <div class="extraInfo">
+        <p></p>
+        <p></p>
+
+    </div>
+
+    <div class="increment">
+        <button (click)="removeExtra()" [class.opacity]="number === 0 " [disabled]= "number <= 0" > - </button>
+        <p>{{number}}</p>
+        <button (click)="addExtra()"> + </button>
+    </div>
+
+</div>

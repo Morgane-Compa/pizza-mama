@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IProductsByCategory, PRODUCTS } from '../mocks/products';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,17 @@ import { Injectable } from '@angular/core';
 export class ProductService {
 
   constructor() { }
+
+  // on retourne la liste des produits
+  getProducts(): IProductsByCategory[] {
+    return PRODUCTS;
+  }
+
+  //On récupère un seul produits
+  getProduct(id: number):  IProductsByCategory | undefined  {
+    return PRODUCTS.find(product => product.id === id);
+  } 
+
+  
+
 }
