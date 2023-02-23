@@ -21,12 +21,12 @@ export class CustomizeParentComponent {
    productDetail?: IProductsByCategory;
    extras: IIngredient[] = INGREDIENTS;
 
-   singleProduct!: IProduct | void;
+   singleProduct!: any;
  
    //on importe nos services
    constructor( 
     private cartService: CartService, 
-    private pruductService: ProductService,
+    public productService: ProductService,
     private activatedRoute: ActivatedRoute,
     private router: Router
     ) {}
@@ -37,7 +37,6 @@ export class CustomizeParentComponent {
  
     //  this.products= this.pruductService.getProducts()
      this.getProduct() 
-
    }
  
    
@@ -46,7 +45,9 @@ export class CustomizeParentComponent {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     // const foundProduct = this.productService.getProductById(id);
 
-    this.pruductService.getProduct(id);
+    this.singleProduct = this.productService.getProduct(id);
+    console.log(this.singleProduct);
+    
 
    }
 
@@ -59,6 +60,9 @@ export class CustomizeParentComponent {
     //  this.product= this.cartService.getProduct() 
     //  console.log(this.product); 
    }
+
+
+
  
  
 

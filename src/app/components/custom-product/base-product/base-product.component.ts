@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IIncludedIngredient } from 'src/app/mocks/products';
 
 @Component({
   selector: 'app-base-product',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./base-product.component.css']
 })
 export class BaseProductComponent {
+
+  @Input() ingredients!: IIncludedIngredient;
+
+  ngOnInit(): void {
+ 
+    console.log(this.ingredients) 
+   }
 
 }

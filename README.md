@@ -25,3 +25,25 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+<!-- Répatition des taches principales -->
+
+<!-- Erdal : 
+     page catégorie + filtres           
+     -->
+
+<!-- Morgane : 
+     page customisation de produit + service panier
+
+     création du service produit : création d'une fonction qui récupère un produit du mock
+     création du service panier : création d'une fonction pour ajouter un article ainsi qu'une fonction pour le retirer
+     création de 3 composants : customize-parent / base-product / product-extra
+     
+
+
+      -->
+
+<!-- Fahed : 
+     page d'accueil + header + liaison entre les deux -->

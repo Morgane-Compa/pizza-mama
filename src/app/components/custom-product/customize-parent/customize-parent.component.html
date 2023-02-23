@@ -1,10 +1,17 @@
 <div class="entireComponent">
-    <img src="" alt="">
+    <img src="assets/img/{{singleProduct[0].picture}}" alt="">
+
 
     <div class="bigPart">
+        <div class="productInfo">
+            <H2>{{singleProduct[0].title}}</H2>
+            <p>{{this.productService.price(singleProduct[0].price)}}</p>
+            <p>{{singleProduct[0].description}}</p>
+        </div>
+
         <!-- j'appelle mes composants enfants -->
-        <app-base-product></app-base-product>
-        <app-product-extra></app-product-extra>
+        <app-base-product [ingredients]="singleProduct[0].includedIngredients"></app-base-product>
+        <app-product-extra [extras]="singleProduct[0].extras"></app-product-extra>
 
         <button (click)="addProduct()">Ajouter au panier - </button>
 
