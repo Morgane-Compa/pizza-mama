@@ -26,14 +26,12 @@ export class CartService {
 
 
 
-
       //on créé nos produits
       private createProduct() {
 
         const newProduct = JSON.stringify([]);
         localStorage.setItem('IProduct', newProduct);
       }
-
 
 
 

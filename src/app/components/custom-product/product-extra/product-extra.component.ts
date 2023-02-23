@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IExtraIngredient } from 'src/app/mocks/products';
 
 @Component({
@@ -11,6 +11,14 @@ export class ProductExtraComponent {
 
   extra!: IExtraIngredient[]
   number: number = 0;
+
+
+  @Input() extras!: IExtraIngredient;
+
+  ngOnInit(): void {
+ 
+    console.log(this.extras) 
+   }
 
   //pour ajouter un extra
   addExtra() {

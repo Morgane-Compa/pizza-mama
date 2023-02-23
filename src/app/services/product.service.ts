@@ -14,19 +14,17 @@ export class ProductService {
   }
 
   //On récupère un seul produits
-  getProduct(id: number):  IProductsByCategory | void  {
-    console.log(id);
+  getProduct(id: number) {
     
-    return PRODUCTS.forEach(element => {
-     const elem = element.products.find(product => product.id === id
-      );
-      
-      console.log(elem);
-      return element;
-      
-      
-    });
+return PRODUCTS.map(element => {
+  return element.products.find(product => product.id === id);
+})
+   
   } 
+
+  public price(value: number) {
+    return Number(value/100).toFixed(2)
+  }
 
   
 
