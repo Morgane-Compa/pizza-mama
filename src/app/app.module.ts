@@ -35,8 +35,7 @@ import { BaseProductComponent } from './components/custom-product/base-product/b
     BuonAppetitoComponent,
     CustomizeParentComponent,
     ProductExtraComponent,
-    BaseProductComponent,
-   
+    BaseProductComponent
   ],
   imports: [
     BrowserModule,
