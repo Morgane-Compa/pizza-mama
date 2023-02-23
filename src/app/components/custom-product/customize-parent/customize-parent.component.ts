@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IIngredient, INGREDIENTS } from 'src/app/mocks/ingredients';
-import { IProductsByCategory, PRODUCTS } from 'src/app/mocks/products';
+import { IProduct, IProductsByCategory, PRODUCTS } from 'src/app/mocks/products';
 import { CartService } from 'src/app/services/cart.service';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -20,6 +20,8 @@ export class CustomizeParentComponent {
   //  products: IProductsByCategory[] = [];
    productDetail?: IProductsByCategory;
    extras: IIngredient[] = INGREDIENTS;
+
+   singleProduct!: IProduct | void;
  
    //on importe nos services
    constructor( 
@@ -34,7 +36,7 @@ export class CustomizeParentComponent {
    ngOnInit(): void {
  
     //  this.products= this.pruductService.getProducts()
-     this.product= this.cartService.getProduct() 
+     this.getProduct() 
 
    }
  
@@ -44,6 +46,8 @@ export class CustomizeParentComponent {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
     // const foundProduct = this.productService.getProductById(id);
 
+    this.pruductService.getProduct(id);
+
    }
 
    
@@ -52,17 +56,11 @@ export class CustomizeParentComponent {
    //pour ajouter un produit au panier
    addProduct(){
  
-     this.product= this.cartService.getProduct() 
-     console.log(this.product); 
+    //  this.product= this.cartService.getProduct() 
+    //  console.log(this.product); 
    }
  
  
-   //pour retirer un article du panier
-   removeProduct(idProduct: number): void{
-     
-     this.cartService.removeProduct(idProduct);
-     this.product= this.cartService.getProduct()
-   }
 
 
 
