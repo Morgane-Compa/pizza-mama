@@ -9,8 +9,12 @@ import { IProduct } from 'src/app/mocks/products';
 export class ProductCardComponent {
 
   @Input() product!: IProduct;
+  @Input() newProducts!: IProduct[];
+
+  ngOnInit(): void {}
 
   public getRound(val: number) {
     return Number(val/100).toFixed(2)
   }
+
 }
