@@ -10,14 +10,9 @@ export class ProductsCategoryComponent implements OnInit{
 
 
   @Input() productsCategories!: IProductsByCategory[];
-  @Input() newProducts!: IProduct[];
 
   constructor() {}
-  ngOnInit(): void {
-
-    console.log('category : ', this.productsCategories);
-
-  }
+  ngOnInit(): void { }
 
 
 }

@@ -40,35 +40,24 @@ export class ProductsComponent implements OnInit {
     console.log('PRODUCT INSIDE OF ONINIT : ',this.products);
   }
 
-  init(products: IProduct[]) {
-    this.newProducts = products;
-  }
-
   public filterProductsWithTag(value: any) {
     //Changer la fonction pour vérifier si le produit comporte un des tags sélectionnés
     // filter((product) => product.products.every(product => product.tags.includes(value.title)));
 
     console.log('VALUE : ', value.title);
 
-    this.newProducts = this.products.map(element => element.products.filter(product => product.tags.some(t => t == value.title))) as unknown as IProduct[];
+    // this.newProducts = this.products.flatMap(element => element.products.filter(product => product.tags.some(t => t == value.title))) as unknown as IProduct[];
 
+    this.products.forEach(category => {
+      category.products = category.products.filter(product => {
+       return product.tags.some(t => t == value.title);
+      })
+    })
 
+    console.log('this.products', this.products);
     console.log("ALL PRODUCTS : ", this.newProducts);
 
-    // this.init(newProducts);
-
-    //this.products = this.newProducts;
-
     return this.products
-
-    for (let i = 0; i < this.products.length; i++) {
-      const element = this.products[i].products;
-    }
-
-    //this.newProducts.push(filterProducts);
-
-
-    //console.log("ALL FILTER: ", filterProducts);
 
   }
 

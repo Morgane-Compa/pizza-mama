@@ -19,7 +19,7 @@ export class CustomProductComponent {
 
   ngOnInit(): void {
 
-    this.product= this.cartService.getProduct()
+    this.product = this.cartService.getProduct()
   }
 
 

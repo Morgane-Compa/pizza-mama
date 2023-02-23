@@ -1,9 +1,7 @@
 <main>
   <app-tags [allTags]="allTags" (newTagEvent)="filterProductsWithTag($event)"></app-tags>
 
-  <app-products-category [productsCategories]="products" [newProducts]="newProducts"></app-products-category>
-
-  <div>{{newProducts | json}}</div>
+  <app-products-category [productsCategories]="products"></app-products-category>
 
   <app-buon-appetito></app-buon-appetito>
 
