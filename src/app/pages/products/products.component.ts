@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct, PRODUCTS } from 'src/app/mocks/products';
+import { IProduct, IProductsByCategory, PRODUCTS } from 'src/app/mocks/products';
 
 @Component({
   selector: 'app-products',
@@ -8,71 +8,57 @@ import { IProduct, PRODUCTS } from 'src/app/mocks/products';
 })
 export class ProductsComponent implements OnInit {
 
-  public products: IProduct[] = PRODUCTS;
+  public products: IProductsByCategory[] = PRODUCTS;
+  public newProducts!: IProduct[];
 
-  // public categories: String[] = ["pizza", "dessert", "boisson"];
-
-  public pizzaProduct: IProduct[] = [];
-  public dessertProduct: IProduct[] = [];
-  public boissonProduct: IProduct[] = [];
-
-  public allCategories: String[] = [];
-
-  public allTags: string[] = ["tomato" , "white" , "drink" , "veggie" , "dessert"];
-// Creer un tableau de tags
-// tags = [{
- // title: "tomato",
- // isSelected: false,
-// }]
-  public allFilteredProducts: IProduct[] = [];
-
+  public allTags: any[] = [
+    {
+      title: "tomato",
+      isSelected: false,
+     },
+    {
+      title: "white",
+      isSelected: false,
+     },
+    {
+      title: "drink",
+      isSelected: false,
+     },
+    {
+      title: "veggie",
+      isSelected: false,
+     },
+    {
+      title: "dessert",
+      isSelected: false,
+     },
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.products);
-
-    this.getProductByCategory();
-
-    this.allFilteredProducts = this.products;
-
-    this.allCategories = Array.from(new Set(this.allCategories));
+    console.log('PRODUCT INSIDE OF ONINIT : ',this.products);
   }
-
-
 
   public filterProductsWithTag(value: any) {
-    // Changer la fonction pour vérifier si le produit comporte un des tags sélectionnés
-    this.allFilteredProducts = this.products.filter(product => {
-      return product.tags.includes(value);
-    });
+    //Changer la fonction pour vérifier si le produit comporte un des tags sélectionnés
+    // filter((product) => product.products.every(product => product.tags.includes(value.title)));
 
+    console.log('VALUE : ', value.title);
 
-    console.log("ALL : ", this.allFilteredProducts);
+    // this.newProducts = this.products.flatMap(element => element.products.filter(product => product.tags.some(t => t == value.title))) as unknown as IProduct[];
+
+    this.products.forEach(category => {
+      category.products = category.products.filter(product => {
+       return product.tags.some(t => t == value.title);
+      })
+    })
+
+    console.log('this.products', this.products);
+    console.log("ALL PRODUCTS : ", this.newProducts);
+
+    return this.products
 
   }
-
-
-  public getProductByCategory() {
-
-    for (let i = 0; i < this.products.length; i++) {
-      const element = this.products[i];
-      this.allCategories.push(element.category);
-
-      if(element.category == "pizza") {
-        this.pizzaProduct.push(element);
-      }
-
-      if(element.category == "dessert") {
-        this.dessertProduct.push(element);
-      }
-
-      if(element.category == "drink") {
-        this.boissonProduct.push(element);
-      }
-
-      }
-    }
-
 
 }

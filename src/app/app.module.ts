@@ -40,7 +40,7 @@ import { BaseProductComponent } from './components/custom-product/base-product/b
     ProductExtraComponent,
     BaseProductComponent,
     IdentificationComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
