@@ -1,6 +1,11 @@
-
-
 <nav>
-    <a routeLink="">table</a>
-    <a routeLink=""><img src="assets\img\Vector.png" alt="image de panier"></a>
-</nav>
+    <div class="nav-buttons">
+      <a routerLink="/home" class="nav-button">
+        Table <span class="counter">{{ tableCounter }}</span>
+      </a>
+      <a routerLink="/about" class="nav-button">
+        <img src="assets\img\Vector.png" alt="image de panier"><span class="counter">{{ panierCounter }}</span>
+      </a>
+    </div>
+  </nav>
+  

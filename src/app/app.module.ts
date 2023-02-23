@@ -10,6 +10,9 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CommandComponent } from './pages/command/command.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { IdentificationComponent } from './identification/identification.component';
+
 import { ProductsCategoryComponent } from './components/products/products-category/products-category.component';
 import { TagsComponent } from './components/products/tags/tags.component';
 import { ProductCardComponent } from './components/products/product-card/product-card.component';
@@ -35,11 +38,13 @@ import { BaseProductComponent } from './components/custom-product/base-product/b
     BuonAppetitoComponent,
     CustomizeParentComponent,
     ProductExtraComponent,
-    BaseProductComponent
-  ],
+    BaseProductComponent,
+    IdentificationComponent
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

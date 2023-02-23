@@ -1,3 +1,31 @@
-nav {
+  .nav-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .nav-button {
+    display: inline-flex;
+    align-items: center;
+    color: #092947;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 3rem;
+  }
+  
+  .counter {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0;
+    color: #092947;
+    font-size: 1.5rem;
+    font-weight: 1000;
+  }
+  
 
-}
