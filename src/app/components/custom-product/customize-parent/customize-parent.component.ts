@@ -17,7 +17,7 @@ export class CustomizeParentComponent {
   //   private router: Router
   // ) {}
 
- 
-  
+
+
 
 }
