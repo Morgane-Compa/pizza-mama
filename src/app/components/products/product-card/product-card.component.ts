@@ -9,6 +9,7 @@ import { IProduct } from 'src/app/mocks/products';
 export class ProductCardComponent {
 
   @Input() product!: IProduct;
+  @Input() newProducts!: IProduct[];
 
   ngOnInit(): void {}
 
