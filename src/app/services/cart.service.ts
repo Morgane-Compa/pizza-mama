@@ -18,8 +18,8 @@ export class CartService {
     if(product) {
       return JSON.parse(product);
     } else {
-      this.createProduct(); 
-      this.getProduct(); 
+      this.createProduct();
+      this.getProduct();
     }
 
   }
@@ -27,14 +27,14 @@ export class CartService {
 
 
 
-      //on créé nos produits 
+      //on créé nos produits
       private createProduct() {
 
         const newProduct = JSON.stringify([]);
         localStorage.setItem('IProduct', newProduct);
       }
 
-      
+
 
 
 
@@ -50,16 +50,16 @@ export class CartService {
   //on ajoute nos produits a notre localStorage et on savegarde
   public addProduct(addedProducts: IProduct){
 
-    const product= this.getProduct() 
+    const product= this.getProduct()
     product.push(addedProducts)
 
-    this.saveProduct(product) 
+    this.saveProduct(product)
   }
 
 
   // si on veut supprimer un produit de notre student et on sauvegarde notre modification
   public removeProduct(idProduct: number){
-    const product = this.getProduct() 
+    const product = this.getProduct()
     product .splice(idProduct, 1)
     this.saveProduct(product);
   }

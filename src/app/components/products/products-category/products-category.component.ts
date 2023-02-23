@@ -1,18 +1,23 @@
-import { Component, Input } from '@angular/core';
-import { IProduct } from 'src/app/mocks/products';
+import { Component, Input, OnInit } from '@angular/core';
+import { IProductsByCategory, IProduct } from 'src/app/mocks/products';
 
 @Component({
   selector: 'app-products-category',
   templateUrl: './products-category.component.html',
   styleUrls: ['./products-category.component.css']
 })
-export class ProductsCategoryComponent {
+export class ProductsCategoryComponent implements OnInit{
 
 
-
-  @Input() products!: IProduct[];
-  @Input() category!: String;
+  @Input() productsCategories!: IProductsByCategory[];
+  @Input() newProducts!: IProduct[];
 
   constructor() {}
+  ngOnInit(): void {
+
+    console.log('category : ', this.productsCategories);
+
+  }
+
 
 }
