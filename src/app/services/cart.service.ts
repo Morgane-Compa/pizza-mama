@@ -25,7 +25,6 @@ export class CartService {
   }
 
 
-
       //on créé nos produits
       private createProduct() {
 
@@ -35,13 +34,11 @@ export class CartService {
 
 
 
-
     //on créé une fonction pour sauvegarder nos produits
     private saveProduct(products: IProduct) {
 
       localStorage.setItem('student', JSON.stringify(products));
     }
-
 
 
 

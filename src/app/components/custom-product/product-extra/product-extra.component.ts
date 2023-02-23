@@ -13,7 +13,7 @@ export class ProductExtraComponent {
   number: number = 0;
 
 
-  @Input() extras!: IExtraIngredient;
+  @Input() extras!: IExtraIngredient[];
 
   ngOnInit(): void {
  

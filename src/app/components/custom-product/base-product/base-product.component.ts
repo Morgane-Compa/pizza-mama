@@ -8,11 +8,13 @@ import { IIncludedIngredient } from 'src/app/mocks/products';
 })
 export class BaseProductComponent {
 
-  @Input() ingredients!: IIncludedIngredient;
+  @Input() ingredients!: IIncludedIngredient[];
 
   ngOnInit(): void {
  
     console.log(this.ingredients) 
    }
+
+  
 
 }
