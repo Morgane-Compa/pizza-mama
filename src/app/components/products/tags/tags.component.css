@@ -6,6 +6,10 @@
   margin-bottom: 38px;
 
 }
+.selected {
+  background-color: #092947 !important;
+  color: #ffffff;
+}
 
 .product-tags li {
   list-style: none;
@@ -18,3 +22,4 @@
   -o-border-radius: 40px;
   cursor: pointer;
 }
+

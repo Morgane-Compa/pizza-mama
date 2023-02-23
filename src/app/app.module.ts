@@ -31,12 +31,11 @@ import { BaseProductComponent } from './components/custom-product/base-product/b
     NavBarComponent,
     ProductsCategoryComponent,
     TagsComponent,
-    ProductCardComponent
+    ProductCardComponent,
     BuonAppetitoComponent,
     CustomizeParentComponent,
     ProductExtraComponent,
-    BaseProductComponent,
-   
+    BaseProductComponent
   ],
   imports: [
     BrowserModule,

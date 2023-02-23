@@ -10,7 +10,10 @@ export class ProductCardComponent {
 
   @Input() product!: IProduct;
 
+  ngOnInit(): void {}
+
   public getRound(val: number) {
     return Number(val/100).toFixed(2)
   }
+
 }
