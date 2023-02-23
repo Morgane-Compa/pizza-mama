@@ -20,7 +20,6 @@ export class IdentificationComponent {
   ngOnInit() {
     this.identificationForm = this.formBuilder.group({
       identification: ['', [Validators.required, Validators.pattern(/^(1[0-4]|[1-9])$/)]]
-      // identification: ['', [Validators.required, Validators.pattern(/^(1[0-4]|[1-9])$/)]]
     })
   }
 
@@ -38,9 +37,7 @@ export class IdentificationComponent {
       for (let i = 1; i <= 14; i++) {
         const element = i;
         tabs.push(i);
-        //console.log(element);
         if(element == value) {
-          // console.log(value);
           localStorage.setItem(value.toString(), JSON.stringify([]))
         }
       }
@@ -54,7 +51,7 @@ export class IdentificationComponent {
       console.log(this.error);
 
       }
-
+    
     }
   
   }
