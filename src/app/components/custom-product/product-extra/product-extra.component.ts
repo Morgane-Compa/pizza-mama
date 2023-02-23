@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IExtraIngredient } from 'src/app/mocks/products';
 
 @Component({
   selector: 'app-product-extra',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-extra.component.css']
 })
 export class ProductExtraComponent {
+
+
+  extra!: IExtraIngredient[]
+  number: number = 0;
+
+  //pour ajouter un extra
+  addExtra() {
+
+    this.number++;
+  }
+
+
+  //pour enlever un extra
+  removeExtra() {
+
+    if (this.number >= 0) {
+      this.number--;
+    }
+  }
 
 }

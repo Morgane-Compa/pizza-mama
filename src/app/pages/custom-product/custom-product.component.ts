@@ -19,23 +19,24 @@ export class CustomProductComponent {
 
   ngOnInit(): void {
 
-    this.product= this.cartService.getProduct()
+    //this.product= this.cartService.getProduct()
   }
 
 
-  addProduct(){
+  // addProduct(){
 
-    this.product= this.cartService.getProduct()
-    console.log(this.product);
-  }
+  //   this.product= this.cartService.getProduct()
+  //   console.log(this.product);
+  // }
 
 
 
-  removeProduct(idProduct: number): void{
+  // removeProduct(idProduct: number): void{
 
-    this.cartService.removeProduct(idProduct);
-    this.product= this.cartService.getProduct()
-  }
+  //   this.cartService.removeProduct(idProduct);
+  //   this.product= this.cartService.getProduct()
+  // }
+
 
 
 }
