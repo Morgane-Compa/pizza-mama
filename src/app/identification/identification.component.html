@@ -1,5 +1,5 @@
 <div id="welcome">
-<form [formGroup]="identificationForm" (ngSubmit)="onSubmit()">
+<form [formGroup]= "identificationForm" (ngSubmit)="onSubmit()">
     <h1>Benvenuto!</h1>
   <label for="identification">Veuillez renseigner votre numéro de table:</label>
   <input type="text" id="identification" placeholder="Example 11" formControlName="identification">
