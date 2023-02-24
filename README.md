@@ -6,44 +6,77 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
+## Contexte du projet
 
-<!-- Répatition des taches principales -->
+La chaîne de restaurants Pizzeria Della Mamma souhaite automatiser la prise de commande en restaurant. Pour cela, chaque tablée se verra attribuer une tablette au moment de s’installer. Les clients pourront alors créer leur commande et l’envoyer en cuisine directement. Il est important que les clients aient la possibilité de customiser leurs pizzas.
 
-<!-- Erdal : 
-     page catégorie + filtres           
-     -->
+Le projet ne nécessite pas de responsive car il est destiné à une tablette dont les dimensions sont connues.  
 
-<!-- Morgane : 
-     page customisation de produit + service panier
+La pizzeria fournira les maquettes ainsi que les données de produits.
 
-     création du service produit : création d'une fonction qui récupère un produit du mock
-     création du service panier : création d'une fonction pour ajouter un article ainsi qu'une fonction pour le retirer
-     création de 3 composants : customize-parent / base-product / product-extra
-     
+## Modalités pédagogiques
+
+Les équipes (de 3 personnes) sont établit à l'avance par la formatrice.
+Les apprenant.e.s disposent d'une semaine pour terminer le projet.  
+Le rendu se fera vendredi 24 février sur github ou gitlab. 
+
+## Critères de performance
+  
+Le projet doit respecter les maquettes et présenter toutes les fonctionnalités.
+
+## Modalités d'évaluation
+
+Il est important que ce soit une personne différente du groupe qui s’occupe de ces features. Celles-ci devront être décrite dans le readme par la personne l'ayant réalisée :
+
+- La customisation d’un produit
+
+- La sélection et modification du numéro de table
+
+- L’affichage des produits classés par type de produits
+
+Pour les groupes de 4 personnes, la quatrième personne devra s'occuper du panier
+
+Le readme doit présenter le projet et les étapes de son installation
+
+## Livrables
+
+Un dépôt github par groupe
 
 
-      -->
+### L’affichage des produits classés par type de produits
 
-<!-- Fahed : 
-     page d'accueil + header + liaison entre les deux -->
+- Cette tâche a été réalisée par Erdal.
+
+ - La page produit se trouve dans le dossier /pages
+
+ - Les composants enfant concernant cette page sont regroupés dans /composants/products.
+
+- il y a 3 composants enfants:
+
+	 -- product-card
+
+	-- products-category
+
+	-- tags
+
+---------------------------------------------------------------------------------
+
+### L’affichage des produits classés par type de produits
+
+- La customisation d’un produit a été réalisé par Morgane: 
+
+	-- page customisation de produit + service panier
+
+	-- création du service produit : création d'une fonction qui récupère un produit du mock
+
+	-- création du service panier : création d'une fonction pour ajouter un article ainsi qu'une fonction pour le retirer
+
+	-- création de 3 composants : customize-parent / base-product / product-extra
+
+
+### L’affichage des produits classés par type de produits
+
+- La sélection et modification du numéro de table a été réalisé par Fahed.
+	-- page d'accueil + header + liaison entre les deux
