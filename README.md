@@ -46,4 +46,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
       -->
 
 <!-- Fahed : 
-     page d'accueil + header + liaison entre les deux -->
+     page d'accueil + header + liaison entre les deux 
+     
+     Création de deux composants : identification / nav-bar.
+     Création du service local-storage : set item in, get and remove item from local storage.
+     Création du composant header: intégration de style, (fonctionnalité en cours).
+-->
