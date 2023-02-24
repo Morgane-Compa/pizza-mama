@@ -10,21 +10,18 @@ export class TagsComponent implements OnInit {
 
   constructor(private cartService: CartService) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   @Input() allTags!: any[];
-  @Output() newTagEvent = new EventEmitter<string>();
+  @Output() newTagEvent = new EventEmitter<string>(true);
 
 
-  public filterProductsWithTag(value: string) {
-    this.newTagEvent.emit(value);
-
+  public filterProductsWithTag() {
+     this.newTagEvent.emit();
   }
 
   public toggleSelected(tag: any) {
-    
+
     return tag.isSelected = !tag.isSelected;
 
   }
