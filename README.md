@@ -45,6 +45,7 @@ Le readme doit présenter le projet et les étapes de son installation
 Un dépôt github par groupe
 
 
+
 ### L’affichage des produits classés par type de produits
 
 - Cette tâche a été réalisée par Erdal.
@@ -80,3 +81,6 @@ Un dépôt github par groupe
 
 - La sélection et modification du numéro de table a été réalisé par Fahed.
 	-- page d'accueil + header + liaison entre les deux
+  -- Création de deux composants : identification / nav-bar.
+  -- Création du service local-storage : set item in, get and remove item from local storage.
+  -- Création du composant header: intégration de style, (fonctionnalité en cours).
