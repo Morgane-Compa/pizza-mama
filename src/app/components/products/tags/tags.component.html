@@ -1,5 +1,5 @@
 <ul class="product-tags d-flex">
-  <li *ngFor="let tag of allTags; true" (click)="filterProductsWithTag(tag)" (click)="toggleSelected(tag)" [class.selected]="tag.isSelected">
+  <li *ngFor="let tag of allTags;" (click)="filterProductsWithTag()" (click)="toggleSelected(tag)" [class.selected]="tag.isSelected">
     <span>{{ tag.title | titlecase }}</span>
   </li>
 </ul>

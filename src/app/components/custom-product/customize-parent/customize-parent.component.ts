@@ -22,50 +22,37 @@ export class CustomizeParentComponent {
    extras: IIngredient[] = INGREDIENTS;
 
    singleProduct!: any;
- 
+
    //on importe nos services
-   constructor( 
-    private cartService: CartService, 
+   constructor(
+    private cartService: CartService,
     public productService: ProductService,
     private activatedRoute: ActivatedRoute,
     private router: Router
     ) {}
- 
- 
+
+
    // on initialise nos deux services
    ngOnInit(): void {
- 
-    //  this.products= this.pruductService.getProducts()
-     this.getProduct() 
+
+    //  this.products = this.pruductService.getProducts()
+     this.getProduct();
+
    }
- 
-   
 
-   getProduct() {
+   public getProduct() {
     const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-    // const foundProduct = this.productService.getProductById(id);
-
     this.singleProduct = this.productService.getProduct(id);
     console.log(this.singleProduct);
-    
 
    }
 
-   
-   
-   //initialisation des methodes du panier via le service
-   //pour ajouter un produit au panier
+
+
+
    addProduct(){
- 
-    //  this.product= this.cartService.getProduct() 
-    //  console.log(this.product); 
+
    }
-
-
-
- 
- 
-
 
 
 }

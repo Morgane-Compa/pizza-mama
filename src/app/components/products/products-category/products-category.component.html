@@ -1,5 +1,5 @@
 <div class="product-categories" *ngFor="let item of productsCategories">
-  <h2 *ngIf="item.category">Les {{item.category}}s della mamma</h2>
+  <h2 *ngIf="item.products.length > 0">Les {{item.category}}s della mamma</h2>
   <div class="cards-cont d-flex">
     <app-product-card *ngFor="let product of item.products" [product]="product" class="product-card d-flex"></app-product-card>
   </div>
