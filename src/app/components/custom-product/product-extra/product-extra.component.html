@@ -1,11 +1,12 @@
 <h3>Extras</h3>
 
 <!-- utiliser un *ngFor pour que tout les ingrédients soit bouclé  -->
-<div  class="extras">
-    <!-- *ngFor="let item of extras" -->
+<div *ngFor="let item of extras" class="extras">
+    
     <div class="extraInfo">
-        <!-- <p>{{item.extras.title}}</p> -->
-        <p></p>
+        <p>{{item.ingredient.title}}</p>
+        <p>{{this.productService.price(item.additionalPrice)}} €</p>
+
 
     </div>
 

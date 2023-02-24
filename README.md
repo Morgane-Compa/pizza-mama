@@ -37,9 +37,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <!-- Morgane : 
      page customisation de produit + service panier
 
-     création du service produit : création d'une fonction qui récupère un produit du mock
+     création du service produit
+
      création du service panier : création d'une fonction pour ajouter un article ainsi qu'une fonction pour le retirer
+
      création de 3 composants : customize-parent / base-product / product-extra
+
+     dans mon service j'ai créer une fonction pour récupérer mon produit à partir du mock
+
+     j'ai aussi créé dans le service une fonction pour récupérer le prix correctement
+
+     Dans customize-parent.ts j'ai récupéré mon produit via le service
+
+     
+
      
 
 

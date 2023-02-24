@@ -17,10 +17,9 @@ export class CustomizeParentComponent {
 
    // je récupère les donnes de mes mocks
    product: IProductsByCategory[] = PRODUCTS;
-  //  products: IProductsByCategory[] = [];
    productDetail?: IProductsByCategory;
    extras: IIngredient[] = INGREDIENTS;
-
+  //  pour récupérer un seul produit
    singleProduct!: any;
  
    //on importe nos services

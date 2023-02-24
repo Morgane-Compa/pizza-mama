@@ -1,11 +1,13 @@
 <div class="entireComponent">
+    <!-- je récupère l'image de mon produit -->
     <img src="assets/img/{{singleProduct[0].picture}}" alt="">
 
 
     <div class="bigPart">
         <div class="productInfo">
+            <!-- je récupère les informations de mon produit  -->
             <H2>{{singleProduct[0].title}}</H2>
-            <p>{{this.productService.price(singleProduct[0].price)}}</p>
+            <p>{{this.productService.price(singleProduct[0].price)}} €</p>
             <p>{{singleProduct[0].description}}</p>
         </div>
 
@@ -13,6 +15,7 @@
         <app-base-product [ingredients]="singleProduct[0].includedIngredients"></app-base-product>
         <app-product-extra [extras]="singleProduct[0].extras"></app-product-extra>
 
+        <!-- mon bouton pour ajouter au panier (désolé il est pas fini) -->
         <button (click)="addProduct()">Ajouter au panier - </button>
 
     </div>
